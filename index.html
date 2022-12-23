@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <header class="header">
+      <a class="brand">Quimey</a>
+      <ul class="nav-list">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Sobre mí</a></li>
+        <li><a href="#">Proyectos</a></li>
+        <li><a href="#">Contactame</a></li>
+      </ul>
+    </header>
+    <main>
+      <section class="home">
+        <div>
+          <h1>Hola, soy <span>Quimey</span></h1>
+          <p>Desarrollador Frontend</p>
+        </div>
+        <div>
+          <img src="./assets/profile-picture.jpeg" alt="Profile Img" />
+        </div>
+      </section>
+
+      <section class="about-me">
+        <div class="about-me__container">
+          <div class="info">
+            <h2 class="section-title">Sobre mí</h2>
+            <p class="paragraph">
+              Mi nombre es Quimey, y soy
+              <span class="primary-color">desarrollador frontend</span>.
+            </p>
+            <p class="paragraph">
+              Me especialicé en <span class="primary-color">React JS</span>, y
+              tego conocimientos en backend (NodeJS, MongoDB y Express), que me
+              permiten elaborar páginas full stack.
+            </p>
+            <p class="paragraph">
+              Con mi experiencia trabajando en equipo desarrollé aptitudes que
+              me permiten participar en proyectos con autonomía y empatía,
+              logrando así los objetivos planteados.
+            </p>
+            <p>
+              Me entusiasman los desafíos que me permiten seguir creciendo y
+              aprender cosas nuevas.
+            </p>
+          </div>
+
+          <div>
+            <div class="tab-titles">
+              <ul>
+                <li class="tab-link active-link">Formación</li>
+                <li class="tab-link">Habilidades</li>
+                <li class="tab-link">Experiencia laboral</li>
+              </ul>
+            </div>
+
+            <div class="tab-content active-tab" id="Formación">
+              <ul class="education">
+                <li class="tab-item">
+                  <span>The Web Development Bootcamp 2022</span><br />Colt
+                  Steele
+                </li>
+                <li class="tab-item">
+                  <span>React - The Complete Guide</span><br />Maximilian
+                  Schwartzmuller
+                </li>
+                <li class="tab-item">
+                  <span>Code w/ Node 2021</span><br />Ian Schoonover
+                </li>
+                <li class="tab-item">
+                  <span>Javascript30, What The Flexbox!?, CSS Grid</span
+                  ><br />Wes Bos
+                </li>
+                <li class="tab-item">
+                  <span>Conquering Responsive Layouts</span><br />Kevin Powell
+                </li>
+              </ul>
+            </div>
+
+            <div class="tab-content" id="Habilidades">
+              <div class="skills">
+                <div class="front">
+                  <h4>Frontend</h4>
+                  <div class="icons">
+                    <img
+                      class="icon"
+                      src="./assets/icons/html-icon.png"
+                      alt="HTML Icon"
+                    />
+                    <img
+                      class="icon"
+                      src="./assets/icons/css-icon.png"
+                      alt="CSS Icon"
+                    />
+                    <img
+                      class="icon"
+                      src="./assets/icons/javascript-icon.png"
+                      alt="JavaScript Icon"
+                    />
+                    <img
+                      class="icon"
+                      src="./assets/icons/bootstrap-icon.png"
+                      alt="Bootstrap Icon"
+                    />
+                    <img
+                      class="icon"
+                      src="./assets/icons/react-icon.png"
+                      alt="ReactJS Icon"
+                    />
+                  </div>
+                </div>
+                <div class="back">
+                  <h4>Backend</h4>
+                  <div class="icons">
+                    <img
+                      class="icon"
+                      src="./assets/icons/nodejs-icon.png"
+                      alt="NodeJS Icon"
+                    />
+                    <img
+                      class="icon"
+                      src="./assets/icons/mongodb-icon.png"
+                      alt="MongoDB Icon"
+                    />
+                    <img
+                      class="icon"
+                      src="./assets/icons/express-icon.png"
+                      alt="ExpressJS Icon"
+                    />
+                  </div>
+                </div>
+                <div class="tools">
+                  <h4>Herramientas</h4>
+                  <div class="icons">
+                    <img
+                      class="icon"
+                      src="./assets/icons/git-icon.png"
+                      alt="Git Icon"
+                    />
+                    <img
+                      class="icon"
+                      src="./assets/icons/github-icon.png"
+                      alt="GitHub Icon"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-content experience" id="Experiencia laboral">
+              <ul>
+                <li class="tab-item">
+                  <span>Desarrollador web</span><br />2022 - Actualidad
+                </li>
+                <li class="tab-item">
+                  <span
+                    >Coordinador del área de matemática - Instituto
+                    Aligator</span
+                  ><br />2018 - 2022
+                </li>
+                <li class="tab-item">
+                  <span
+                    >Profesor particular de matemática - Instituto
+                    Aligator</span
+                  ><br />2013 - 2022
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects">
+        <div class="projects__container">
+          <h2 class="projects__title">Mis proyectos</h2>
+          <p>En construcción...</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

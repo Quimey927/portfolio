@@ -1,0 +1,252 @@
+:root {
+  --ff-primary: 'Poppins', sans-serif;
+  --ff-secondary: 'Raleway', sans-serif;
+  --ff-tertiary: 'Nunito', sans-serif;
+  --color-primary: hsl(0, 56%, 52%);
+  /* --color-primary: hsl(194, 98%, 39%); */
+  --color-secondary: hsl(180, 5%, 4%);
+  --header-height: 68px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  font-family: var(--ff-primary);
+  font-weight: 300;
+  color: white;
+}
+
+body::before {
+  display: block;
+  content: '';
+  height: var(--header-height);
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+section {
+  padding: 3rem;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.primary-color {
+  color: var(--color-primary);
+}
+
+/* HEADER */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  color: white;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: var(--header-height);
+  z-index: 99;
+}
+
+.brand {
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--color-primary);
+  font-weight: 200;
+}
+
+.nav-list {
+  display: flex;
+}
+
+.nav-list li {
+  margin-left: 2rem;
+  cursor: pointer;
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-list a:hover,
+.nav-list a:focus {
+  color: var(--color-primary);
+}
+
+/* HOME */
+
+.home {
+  height: calc(100vh - var(--header-height));
+  /*   background-image: url('./assets/portrait.jpg');
+  background-size: cover;
+  background-position: right top;
+  background-attachment: fixed; */
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+}
+
+.home div {
+  text-align: start;
+  font-size: 1.5rem;
+}
+
+.home div h1 {
+  margin-top: 0;
+  font-weight: 400;
+}
+
+.home h1 span {
+  color: var(--color-primary);
+  font-weight: 200;
+  text-align: start;
+}
+
+.home p {
+  font-weight: 300;
+}
+
+.home img {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+}
+
+/* ABOUT ME */
+
+.about-me {
+  background-color: var(--color-secondary);
+}
+
+.about-me__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+}
+
+.about-me__img {
+  height: 300px;
+  border-radius: 10px;
+}
+
+.info h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.info p {
+  line-height: 1.6;
+  font-size: 0.85rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.tab-titles {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.tab-titles ul {
+  display: flex;
+  gap: 2rem;
+}
+
+.tab-link {
+  cursor: pointer;
+}
+
+.tab-link:hover,
+.tab-link:focus {
+  color: var(--color-primary);
+}
+
+.active-link {
+  position: relative;
+}
+
+.active-link::after {
+  content: '';
+  background-color: var(--color-primary);
+  display: block;
+  width: 30px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+}
+
+.tab-content {
+  display: none;
+}
+
+.active-tab {
+  display: block;
+}
+
+.education,
+.experience {
+  font-size: 0.8rem;
+}
+
+.tab-item + .tab-item {
+  margin-top: 1rem;
+}
+
+.tab-item span {
+  color: var(--color-primary);
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.skills {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+}
+
+.skills h4 {
+  font-weight: 300;
+  text-align: center;
+}
+
+.icons {
+  padding: 0;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.icon {
+  height: 40px;
+}
+
+/* PROJECTS */
+
+.projects__container {
+  text-align: center;
+}
