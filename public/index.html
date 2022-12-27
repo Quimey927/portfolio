@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <header class="header">
+      <a class="brand">Quimey</a>
+      <ul class="nav-list">
+        <li><a href="#home">Inicio</a></li>
+        <li><a href="#about-me">Sobre mí</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#contact">Contactame</a></li>
+      </ul>
+    </header>
+    <main>
+      <section class="home" id="home">
+        <div>
+          <h1>Hola, soy <span>Quimey</span></h1>
+          <p>Desarrollador Frontend</p>
+        </div>
+        <!-- <div>
+          <img src="./assets/profile-picture.jpeg" alt="Profile Img" />
+        </div> -->
+      </section>
+
+      <section class="about-me" id="about-me">
+        <div class="about-me__container">
+          <div class="info">
+            <h2 class="section__title about-me__title">Sobre mí</h2>
+            <p class="paragraph">
+              Mi nombre es Quimey, y soy
+              <span class="primary-color">desarrollador frontend</span>.
+            </p>
+            <p class="paragraph">
+              Me especialicé en <span class="primary-color">React JS</span>, y
+              tego conocimientos en backend (NodeJS, MongoDB y Express), que me
+              permiten elaborar páginas full stack.
+            </p>
+            <p class="paragraph">
+              Con mi experiencia trabajando en equipo desarrollé aptitudes que
+              me permiten participar en proyectos con autonomía y empatía,
+              logrando así los objetivos planteados.
+            </p>
+            <p>
+              Me entusiasman los desafíos que me permiten seguir creciendo y
+              aprender cosas nuevas.
+            </p>
+          </div>
+
+          <div>
+            <div class="tab-titles">
+              <ul>
+                <li class="tab-link active-link">Formación</li>
+                <li class="tab-link">Habilidades</li>
+                <li class="tab-link">Experiencia laboral</li>
+              </ul>
+            </div>
+
+            <div class="tab-content active-tab" id="Formación">
+              <ul class="education">
+                <li class="tab-item">
+                  <span>The Web Development Bootcamp 2022</span><br />Colt
+                  Steele
+                </li>
+                <li class="tab-item">
+                  <span>React - The Complete Guide</span><br />Maximilian
+                  Schwartzmüller
+                </li>
+                <li class="tab-item">
+                  <span>Code w/ Node 2021</span><br />Ian Schoonover
+                </li>
+                <li class="tab-item">
+                  <span>Javascript30, What The Flexbox!?, CSS Grid</span
+                  ><br />Wes Bos
+                </li>
+                <li class="tab-item">
+                  <span>Conquering Responsive Layouts</span><br />Kevin Powell
+                </li>
+              </ul>
+            </div>
+
+            <div class="tab-content" id="Habilidades">
+              <div class="skills">
+                <div class="front">
+                  <h4>Frontend</h4>
+                  <div class="icons">
+                    <img
+                      class="icon"
+                      src="./assets/icons/html-icon.png"
+                      alt="HTML Icon"
+                    />
+                    <img
+                      class="icon"
+                      src="./assets/icons/css-icon.png"
+                      alt="CSS Icon"
+                    />
+                    <img
+                      class="icon"
+                      src="./assets/icons/javascript-icon.png"
+                      alt="JavaScript Icon"
+                    />
+                    <img
+                      class="icon"
+                      src="./assets/icons/bootstrap-icon.png"
+                      alt="Bootstrap Icon"
+                    />
+                    <img
+                      class="icon"
+                      src="./assets/icons/react-icon.png"
+                      alt="ReactJS Icon"
+                    />
+                  </div>
+                </div>
+                <div class="back">
+                  <h4>Backend</h4>
+                  <div class="icons">
+                    <img
+                      class="icon"
+                      src="./assets/icons/nodejs-icon.png"
+                      alt="NodeJS Icon"
+                    />
+                    <img
+                      class="icon"
+                      src="./assets/icons/mongodb-icon.png"
+                      alt="MongoDB Icon"
+                    />
+                    <img
+                      class="icon"
+                      src="./assets/icons/express-icon.png"
+                      alt="ExpressJS Icon"
+                    />
+                  </div>
+                </div>
+                <div class="tools">
+                  <h4>Herramientas</h4>
+                  <div class="icons">
+                    <img
+                      class="icon"
+                      src="./assets/icons/git-icon.png"
+                      alt="Git Icon"
+                    />
+                    <img
+                      class="icon"
+                      src="./assets/icons/github-icon.png"
+                      alt="GitHub Icon"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-content experience" id="Experiencia laboral">
+              <ul>
+                <li class="tab-item">
+                  <span>Desarrollador web</span><br />2022 - Actualidad
+                </li>
+                <li class="tab-item">
+                  <span
+                    >Coordinador del área de matemática - Instituto
+                    Aligator</span
+                  ><br />2018 - 2022
+                </li>
+                <li class="tab-item">
+                  <span
+                    >Profesor particular de matemática - Instituto
+                    Aligator</span
+                  ><br />2013 - 2022
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects" id="projects">
+        <h2 class="section__title projects__title">Mis últimos proyectos</h2>
+        <div class="projects__container">
+          <div class="project">
+            <div class="project__description hidden">
+              <div class="white-line"></div>
+              <h4>El Prode de la Scaloneta</h4>
+              <p>
+                Esta página web full-stack fue diseñada y desarrollada
+                completamente por mí para un cliente. <br />
+                Fue utilizada intensamente durante el mundial por los 33
+                usuarios que participaron del prode. Además compré un dominio
+                (GoDaddy) y lo asocié al hosting Heroku.
+              </p>
+              <button>
+                <a href="http://www.elprodedelascaloneta.com/" target="_blank"
+                  >Ir a la página</a
+                >
+              </button>
+              <button>
+                <a
+                  href="https://github.com/Quimey927/prode-scaloneta"
+                  target="_blank"
+                >
+                  Ver código
+                </a>
+              </button>
+              <div class="white-line"></div>
+            </div>
+            <div class="project__container">
+              <img
+                src="./assets/projects/prode/prode1.png"
+                alt="Página del Prode de la Scaloneta"
+              />
+            </div>
+          </div>
+
+          <div class="project">
+            <div class="project__description hidden">
+              <div class="white-line"></div>
+              <h4>Yelp Camp</h4>
+              <p>
+                Proyecto final del curso The Web Development Bootcamp de Colt
+                Steele. <br />
+                Además de Bootstrap, PassportJS para la autenticación, y EJS
+                como motor de plantillas, esta página incluye mapas con MapBox,
+                carga de imágenes con Cloudinary, y permite a los usuarios crear
+                posts y realizar comentarios.
+              </p>
+              <button>
+                <a href="#" target="_blank">Ir a la página</a>
+              </button>
+              <button>
+                <a
+                  href="https://github.com/Quimey927/yelp-camp"
+                  target="_blank"
+                >
+                  Ver código
+                </a>
+              </button>
+              <div class="white-line"></div>
+            </div>
+            <div class="project__container">
+              <img
+                class="project__image"
+                src="./assets/projects/yelp-camp/yelp-camp1.png"
+                alt="Página de Yelp Camp"
+              />
+            </div>
+          </div>
+
+          <div class="project">
+            <div class="project__description hidden">
+              <div class="white-line"></div>
+              <h4>Food Order App</h4>
+              <p>
+                Aplicación hecha con React JS. Se trata de uno de los proyectos
+                del curso de React de Maximilian Schwartzmüller, donde creamos
+                una aplicación para realizar pedidos de un comercio de comida.
+                Un rasgo especial de la aplicación es un modal en el que se
+                muestra el carrito.
+              </p>
+              <button>
+                <a href="https://food-order-app-d4657.web.app/" target="_blank"
+                  >Ir a la página</a
+                >
+              </button>
+              <button>
+                <a
+                  href="https://github.com/Quimey927/Food-Order-App"
+                  target="_blank"
+                >
+                  Ver código
+                </a>
+              </button>
+              <div class="white-line"></div>
+            </div>
+            <div class="project__container">
+              <img
+                src="./assets/projects/food-order-app/food-order-app1.png"
+                alt="Página de la App de comida"
+              />
+            </div>
+          </div>
+
+          <div class="project">
+            <div class="project__description hidden">
+              <div class="white-line"></div>
+              <h4>E-commerce product page</h4>
+              <p>
+                Challenge de la página frontendmentor.io (<a
+                  href="https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6"
+                  target="_blank"
+                  >ver challenge</a
+                >), donde, aplicando lo aprendido de ReactJS, recreé esta
+                elegante página de un producto de e-commerce.
+              </p>
+              <button>
+                <a
+                  href="https://e-commerce-product-page-c6eb5.web.app/"
+                  target="_blank"
+                  >Ir a la página</a
+                >
+              </button>
+              <button>
+                <a
+                  href="https://github.com/Quimey927/e-commerce-product-page"
+                  target="_blank"
+                >
+                  Ver código
+                </a>
+              </button>
+              <div class="white-line"></div>
+            </div>
+            <div class="project__container">
+              <img
+                src="./assets/projects/e-commerce-product-page/e-commerce-product-page1.png"
+                alt="Página del e-commerce product"
+              />
+            </div>
+          </div>
+
+          <div class="project">
+            <div class="project__description hidden">
+              <div class="white-line"></div>
+              <h4>Rest Countries API</h4>
+              <p>
+                Esta aplicación es un challenge de la página frontendmentor.io
+                (<a
+                  href="https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca"
+                  target="_blank"
+                  >ver challenge</a
+                >), donde apliqué mis conocimientos de ReactJS, y en particular
+                el consumir una API (<a
+                  href="https://restcountries.com/"
+                  target="_blank"
+                  >ver la API</a
+                >).
+              </p>
+              <button>
+                <a
+                  href="https://rest-countries-api-ff92b.web.app/"
+                  target="_blank"
+                  >Ir a la página</a
+                >
+              </button>
+              <button>
+                <a
+                  href="https://github.com/Quimey927/rest-countries-api"
+                  target="_blank"
+                >
+                  Ver código
+                </a>
+              </button>
+              <div class="white-line"></div>
+            </div>
+            <div class="project__container">
+              <img
+                src="./assets/projects/countries/countries1.png"
+                alt="Página de la página de los países"
+              />
+            </div>
+          </div>
+
+          <div class="project">
+            <div class="project__description hidden">
+              <div class="white-line"></div>
+              <h4>Quotes App</h4>
+              <p>
+                Esta aplicación está hecha con React JS, y es parte del curso de
+                React de Maximilian Schwartzmüller. Está conectada a una base de
+                datos a través de Firebase, y además de las citas, se pueden
+                dejar comentarios.
+              </p>
+              <button>
+                <a href="https://react-http-acac5.web.app/" target="_blank"
+                  >Ir a la página</a
+                >
+              </button>
+              <button>
+                <a
+                  href="https://github.com/Quimey927/quotes-app"
+                  target="_blank"
+                >
+                  Ver código
+                </a>
+              </button>
+              <div class="white-line"></div>
+            </div>
+            <div class="project__container">
+              <img
+                class="project__image"
+                src="./assets/projects/quotes-app/quotes-app1.png"
+                alt="Página de las citas"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <h3 class="section__title contact__title">¿Nos ponemos en contacto?</h3>
+        <form action="">
+          <input type="text" id="name" placeholder="Nombre" />
+          <input type="email" id="email" placeholder="Email" />
+          <textarea
+            id="message"
+            rows="5"
+            cols="30"
+            placeholder="Mensaje"
+          ></textarea>
+          <button class="button">Enviar</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
