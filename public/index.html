@@ -406,16 +406,18 @@
 
       <section class="contact" id="contact">
         <h3 class="section__title contact__title">¿Nos ponemos en contacto?</h3>
-        <form action="">
-          <input type="text" id="name" placeholder="Nombre" />
-          <input type="email" id="email" placeholder="Email" />
+        <form action="https://formsubmit.co/quimeymata@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="Portfolio mail!" />
+          <input type="text" name="name" placeholder="Nombre" required />
+          <input type="email" name="email" placeholder="Email" required />
           <textarea
-            id="message"
+            name="message"
             rows="5"
             cols="30"
             placeholder="Mensaje"
+            required
           ></textarea>
-          <button class="button">Enviar</button>
+          <button type="submit" class="button">Enviar</button>
         </form>
       </section>
     </main>
