@@ -4,7 +4,7 @@
   --ff-tertiary: 'Nunito', sans-serif; */
 
   --color-primary: hsl(0, 56%, 52%);
-  --color-secondary: hsl(180, 5%, 4%);
+  --color-secondary: rgb(5, 5, 5);
 
   --header-height: 68px;
 }
@@ -17,7 +17,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: var(--header-height);
+  scroll-padding-top: 67px;
 }
 
 body {
@@ -110,22 +110,24 @@ section {
   transform: scale(1.05);
 }
 
+.nav-list a.active {
+  color: var(--color-primary);
+}
+
 /* HOME */
 
 .home {
   height: calc(100vh - var(--header-height));
-  /*   background-image: url('./assets/profile-picture.jpeg');
+  background-image: url('./assets/final-profile-image.png');
   background-size: cover;
   background-position: right top;
-  background-attachment: fixed; */
-  text-align: center;
+  background-attachment: fixed;
   display: grid;
-  /* grid-template-columns: repeat(2, 1fr); */
+  grid-template-columns: repeat(2, 1fr);
   place-items: center;
 }
 
 .home div {
-  text-align: start;
   font-size: 1.5rem;
 }
 
@@ -137,12 +139,10 @@ section {
 .home h1 span {
   color: var(--color-primary);
   font-weight: 200;
-  text-align: start;
 }
 
 .home p {
   font-weight: 300;
-  text-align: center;
 }
 
 /* ABOUT ME */
@@ -170,6 +170,8 @@ section {
 
 .info {
   text-align: end;
+  max-width: 450px;
+  justify-self: end;
 }
 
 .info h2 {
@@ -195,36 +197,46 @@ section {
   gap: 2rem;
 }
 
-.tab-link {
+.not-active-link {
   cursor: pointer;
-}
-
-.tab-link:hover,
-.tab-link:focus {
-  color: var(--color-primary);
-}
-
-.active-link {
+  transition: all 0.3s ease;
   position: relative;
+  color: white;
 }
 
-.active-link::after {
+.not-active-link::after {
   content: '';
-  background-color: var(--color-primary);
+  background-color: white;
   display: block;
   width: 30px;
   position: absolute;
   bottom: 0;
   left: 0;
   height: 2px;
+  transform: scale(0);
+  transition: transform 0.5s ease;
+  transform-origin: left;
+}
+
+.not-active-link:hover::after {
+  transform: scale(1);
+}
+
+.active-link {
+  color: var(--color-primary);
+  cursor: pointer;
 }
 
 .tab-content {
-  display: none;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 1s ease-out;
 }
 
 .active-tab {
-  display: block;
+  height: auto;
+  opacity: 1;
 }
 
 .education,
@@ -279,7 +291,7 @@ section {
 
 .projects__container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
   justify-items: center;
   gap: 0.3rem;
 }
@@ -417,7 +429,7 @@ textarea {
 input:focus,
 textarea:focus {
   outline: none;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgb(0, 0, 0);
 }
 
 input::placeholder,
@@ -439,5 +451,5 @@ textarea::placeholder {
 .button:hover,
 .button:focus {
   transform: scale(1.05);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgb(0, 0, 0);
 }
