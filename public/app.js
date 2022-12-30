@@ -115,3 +115,34 @@ projects.forEach((image) => image.addEventListener('focus', addImageInfo));
 projects.forEach((image) => image.addEventListener('mouseover', addImageInfo));
 projects.forEach((image) => image.addEventListener('focusout', rmvImageInfo));
 projects.forEach((image) => image.addEventListener('mouseout', rmvImageInfo));
+
+// E-mail confirmation logic and Animation logic
+
+const submitButton = document.querySelector('.submit-button');
+const confirmationParagraph = document.querySelector('.email-confirmation');
+const loadingParagraph = document.querySelector('.loading');
+
+const sendEmail = () => {
+  loadingParagraph.classList.add('animation');
+  const params = {
+    name: document.getElementById('name').value,
+    email: document.getElementById('email').value,
+    message: document.getElementById('message').value,
+  };
+
+  const serviceID = 'service_akoynia';
+  const templateID = 'template_fkv1krc';
+
+  emailjs.send(serviceID, templateID, params).then((res) => {
+    loadingParagraph.classList.remove('animation');
+    confirmationParagraph.classList.add('animation');
+    setTimeout(() => {
+      confirmationParagraph.classList.remove('animation');
+      document.getElementById('name').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('message').value = '';
+    }, 4000);
+  });
+};
+
+submitButton.addEventListener('click', sendEmail);

@@ -25,11 +25,26 @@
     </header>
     <main>
       <section class="home" id="home">
-        <div>
+        <div class="home__slogan">
           <h1>Hola, soy <span>Quimey</span></h1>
           <p>Desarrollador Frontend</p>
+          <div class="home__icons">
+            <a href="https://github.com/Quimey927" target="_blank">
+              <img
+                class="icon"
+                src="./assets/icons/github-icon-white.png"
+                alt="GitHub Icon"
+              />
+            </a>
+            <a href="https://www.linkedin.com/in/quimey-mata/" target="_blank">
+              <img
+                class="icon"
+                src="./assets/icons/linkedin-icon-white.png"
+                alt="Linkedin Icon"
+              />
+            </a>
+          </div>
         </div>
-        <div></div>
       </section>
 
       <section class="about-me" id="about-me">
@@ -57,6 +72,13 @@
               Me entusiasman los desafíos que me permiten seguir creciendo y
               aprender cosas nuevas.
             </p>
+            <a
+              download="Currículum-Quimey"
+              href="./assets/Currículum.pdf"
+              target="_blank"
+            >
+              Descargar Currículum
+            </a>
           </div>
 
           <div>
@@ -406,23 +428,31 @@
 
       <section class="contact" id="contact">
         <h3 class="section__title contact__title">¿Nos ponemos en contacto?</h3>
-        <form action="https://formsubmit.co/quimeymata@gmail.com" method="POST">
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_subject" value="Portfolio mail!" />
-          <input type="text" name="name" placeholder="Nombre" required />
-          <input type="email" name="email" placeholder="Email" required />
+        <div class="contact__form">
+          <input type="text" id="name" placeholder="Nombre" />
+          <input type="email" id="email" placeholder="Email" />
           <textarea
-            name="message"
+            id="message"
             rows="5"
             cols="30"
             placeholder="Mensaje"
-            required
           ></textarea>
-          <button type="submit" class="button">Enviar</button>
-        </form>
+          <button type="button" class="submit-button">Enviar</button>
+          <p class="loading">Enviando...</p>
+          <p class="email-confirmation">¡El mail fue enviado con éxito!</p>
+        </div>
       </section>
     </main>
 
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init('57zkm1HQW_LeSQxcU');
+      })();
+    </script>
     <script src="./app.js"></script>
   </body>
 </html>
