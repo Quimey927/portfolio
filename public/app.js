@@ -118,31 +118,64 @@ projects.forEach((image) => image.addEventListener('mouseout', rmvImageInfo));
 
 // E-mail confirmation logic and Animation logic
 
+const formInputs = document.querySelectorAll('.form-input');
 const submitButton = document.querySelector('.submit-button');
 const confirmationParagraph = document.querySelector('.email-confirmation');
 const loadingParagraph = document.querySelector('.loading');
 
+const emailRegex =
+  /^([a-z0-9\_\-\.\%\+]+)@([a-z0-9-_]+)(\.[a-z]{2,10})?(\.[a-z]{2,10})?$/i;
+
 const sendEmail = () => {
-  loadingParagraph.classList.add('animation');
-  const params = {
-    name: document.getElementById('name').value,
-    email: document.getElementById('email').value,
-    message: document.getElementById('message').value,
-  };
+  const nameInput = document.getElementById('name');
+  const emailInput = document.getElementById('email');
+  const messageInput = document.getElementById('message');
 
-  const serviceID = 'service_akoynia';
-  const templateID = 'template_fkv1krc';
+  const nameIsValid = nameInput.value.trim() !== '';
+  const emailIsValid = emailRegex.test(emailInput.value.trim());
+  const messageIsValid = messageInput.value.trim() !== '';
 
-  emailjs.send(serviceID, templateID, params).then((res) => {
-    loadingParagraph.classList.remove('animation');
-    confirmationParagraph.classList.add('animation');
-    setTimeout(() => {
-      confirmationParagraph.classList.remove('animation');
-      document.getElementById('name').value = '';
-      document.getElementById('email').value = '';
-      document.getElementById('message').value = '';
-    }, 4000);
-  });
+  if (!nameIsValid || !emailIsValid || !messageIsValid) {
+    if (!nameIsValid) {
+      nameInput.classList.add('invalid');
+    }
+    if (!emailIsValid) {
+      emailInput.classList.add('invalid');
+    }
+    if (!messageIsValid) {
+      messageInput.classList.add('invalid');
+    }
+  } else {
+    const params = {
+      name: nameInput.value.trim(),
+      email: emailInput.value.trim(),
+      message: messageInput.value.trim(),
+    };
+
+    loadingParagraph.classList.add('animation');
+
+    const serviceID = 'service_akoynia';
+    const templateID = 'template_fkv1krc';
+
+    emailjs.send(serviceID, templateID, params).then((res) => {
+      loadingParagraph.classList.remove('animation');
+      confirmationParagraph.classList.add('animation');
+      setTimeout(() => {
+        confirmationParagraph.classList.remove('animation');
+        document.getElementById('name').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('message').value = '';
+      }, 4000);
+    });
+  }
 };
 
 submitButton.addEventListener('click', sendEmail);
+
+const removeInvalidClass = (evt) => {
+  evt.target.classList.remove('invalid');
+};
+
+formInputs.forEach((input) =>
+  input.addEventListener('input', removeInvalidClass)
+);

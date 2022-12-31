@@ -28,18 +28,20 @@
         <div class="home__slogan">
           <h1>Hola, soy <span>Quimey</span></h1>
           <p>Desarrollador Frontend</p>
-          <div class="home__icons">
+          <div class="home__icon">
             <a href="https://github.com/Quimey927" target="_blank">
               <img
                 class="icon"
-                src="./assets/icons/github-icon-white.png"
+                src="./assets/icons/github-icon.png"
                 alt="GitHub Icon"
               />
             </a>
+          </div>
+          <div class="home__icon">
             <a href="https://www.linkedin.com/in/quimey-mata/" target="_blank">
               <img
                 class="icon"
-                src="./assets/icons/linkedin-icon-white.png"
+                src="./assets/icons/linkedin-icon.png"
                 alt="Linkedin Icon"
               />
             </a>
@@ -48,28 +50,28 @@
       </section>
 
       <section class="about-me" id="about-me">
+        <h2 class="section__title about-me__title">Sobre mí</h2>
         <div class="about-me__container">
           <div class="info">
-            <h2 class="section__title about-me__title">Sobre mí</h2>
-            <p class="paragraph">
+            <p>
               Mi nombre es Quimey, y soy
               <span class="primary-color">desarrollador frontend</span>.
             </p>
-            <p class="paragraph">
+            <p>
               Me especialicé en <span class="primary-color">React JS</span>, y
               tengo conocimientos en backend (<span class="primary-color"
                 >NodeJS</span
               >, <span class="primary-color">MongoDB</span> y
-              <span class="primary-color">ExpressJS</span>), que me permiten
+              <span class="primary-color">ExpressJS</span>), con los que puedo
               elaborar páginas full stack.
             </p>
-            <p class="paragraph">
+            <p>
               Con mi experiencia trabajando en equipo desarrollé aptitudes que
               me permiten participar en proyectos con autonomía y empatía,
               logrando así los objetivos planteados.
             </p>
             <p>
-              Me entusiasman los desafíos que me permiten seguir creciendo y
+              Me entusiasman los desafíos que me posibilitan seguir creciendo y
               aprender cosas nuevas.
             </p>
             <a
@@ -113,74 +115,107 @@
               </ul>
             </div>
 
-            <div class="tab-content" id="Habilidades">
-              <div class="skills">
-                <div class="front">
-                  <h4>Frontend</h4>
-                  <div class="icons">
+            <div class="tab-content skills" id="Habilidades">
+              <div class="technologies">
+                <div class="col">
+                  <div class="technology">
                     <img
                       class="icon"
                       src="./assets/icons/html-icon.png"
                       alt="HTML Icon"
                     />
+                    <span>HTML</span>
+                  </div>
+                  <div class="technology">
                     <img
                       class="icon"
                       src="./assets/icons/css-icon.png"
                       alt="CSS Icon"
                     />
+                    <span>CSS</span>
+                  </div>
+                  <div class="technology">
                     <img
                       class="icon"
                       src="./assets/icons/javascript-icon.png"
                       alt="JavaScript Icon"
                     />
+                    <span>JavaScript</span>
+                  </div>
+                  <div class="technology">
                     <img
                       class="icon"
                       src="./assets/icons/bootstrap-icon.png"
                       alt="Bootstrap Icon"
                     />
+                    <span>Bootstrap</span>
+                  </div>
+                  <div class="technology">
                     <img
                       class="icon"
                       src="./assets/icons/react-icon.png"
                       alt="ReactJS Icon"
                     />
+                    <span>ReactJS</span>
                   </div>
                 </div>
-                <div class="back">
-                  <h4>Backend</h4>
-                  <div class="icons">
+                <div class="col">
+                  <div class="technology">
                     <img
                       class="icon"
                       src="./assets/icons/nodejs-icon.png"
                       alt="NodeJS Icon"
                     />
+                    <span>NodeJS</span>
+                  </div>
+                  <div class="technology">
                     <img
                       class="icon"
                       src="./assets/icons/mongodb-icon.png"
                       alt="MongoDB Icon"
                     />
+                    <span>MongoDB</span>
+                  </div>
+                  <div class="technology">
                     <img
-                      class="icon"
+                      class="icon express-icon"
                       src="./assets/icons/express-icon.png"
                       alt="ExpressJS Icon"
                     />
+                    <span>ExpressJS</span>
                   </div>
-                </div>
-                <div class="tools">
-                  <h4>Herramientas</h4>
-                  <div class="icons">
+                  <div class="technology">
                     <img
                       class="icon"
                       src="./assets/icons/git-icon.png"
                       alt="Git Icon"
                     />
+                    <span>Git</span>
+                  </div>
+                  <div class="technology">
                     <img
                       class="icon"
                       src="./assets/icons/github-icon.png"
                       alt="GitHub Icon"
                     />
+                    <span>GitHub</span>
                   </div>
                 </div>
               </div>
+              <h3>Habilidades blandas</h3>
+              <p>
+                Autonomía <span class="circle">&#8226;</span> Empatía
+                <span class="circle">&#8226;</span> Responsabilidad
+                <span class="circle">&#8226;</span> Trabajo en equipo
+                <span class="circle">&#8226;</span> Proactividad
+                <span class="circle">&#8226;</span> Comunicación
+                <span class="circle">&#8226;</span> Organización
+              </p>
+              <h3>Idiomas</h3>
+              <p>
+                Español (nativo) <span class="circle">&#8226;</span> Inglés
+                (intermedio)
+              </p>
             </div>
 
             <div class="tab-content experience" id="Experiencia Laboral">
@@ -256,7 +291,11 @@
                 posts y realizar comentarios.
               </p>
               <button>
-                <a href="#" target="_blank">Ir a la página</a>
+                <a
+                  href="https://stormy-meadow-01106.herokuapp.com/"
+                  target="_blank"
+                  >Ir a la página</a
+                >
               </button>
               <button>
                 <a
@@ -427,12 +466,23 @@
       </section>
 
       <section class="contact" id="contact">
-        <h3 class="section__title contact__title">¿Nos ponemos en contacto?</h3>
+        <h2 class="section__title contact__title">¿Nos ponemos en contacto?</h2>
         <div class="contact__form">
-          <input type="text" id="name" placeholder="Nombre" />
-          <input type="email" id="email" placeholder="Email" />
+          <input
+            type="text"
+            class="form-input"
+            id="name"
+            placeholder="Nombre"
+          />
+          <input
+            type="text"
+            class="form-input"
+            id="email"
+            placeholder="Email"
+          />
           <textarea
             id="message"
+            class="form-input"
             rows="5"
             cols="30"
             placeholder="Mensaje"
