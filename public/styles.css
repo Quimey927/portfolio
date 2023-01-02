@@ -66,7 +66,7 @@ section {
 
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 20px 10%;
   color: white;
@@ -79,35 +79,56 @@ section {
 }
 
 .brand {
-  font-size: 2rem;
-  cursor: default;
-  color: var(--color-primary);
-  font-weight: 200;
+  display: none;
 }
 
-.nav-list {
+.mobile-nav-list {
   display: flex;
 }
 
-.nav-list li {
-  margin-left: 2rem;
+.desktop-nav-list {
+  display: none;
+}
+
+.nav-item {
   cursor: pointer;
 }
 
-.nav-list a {
+.nav-item + .nav-item {
+  margin-left: 2rem;
+}
+
+.desktop-nav-list a {
   color: white;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
-.nav-list a:hover,
-.nav-list a:focus {
+.desktop-nav-list a:hover,
+.desktop-nav-list a:focus {
   color: var(--color-primary);
   transform: scale(1.05);
 }
 
-.nav-list a.active {
+.desktop-nav-list a.active {
   color: var(--color-primary);
+}
+
+.header-icon {
+  width: 30px;
+  padding: 0.2em;
+  outline: 1px solid white;
+  outline-offset: 2px;
+  border-radius: 4px;
+  background-color: var(--color-primary);
+  vertical-align: middle;
+  transition: all 0.3s ease;
+}
+
+.header-icon:hover,
+.header-icon:focus {
+  color: var(--color-primary);
+  transform: scale(1.2);
 }
 
 /* HOME */
@@ -540,6 +561,18 @@ section {
 }
 
 @media (min-width: 465px) {
+  .header {
+    justify-content: space-between;
+  }
+
+  .brand {
+    display: inline;
+    font-size: 1.5rem;
+    cursor: default;
+    color: var(--color-primary);
+    font-weight: 200;
+  }
+
   .about-me {
     padding: 3rem;
   }
@@ -587,6 +620,22 @@ section {
 }
 
 @media (min-width: 850px) {
+  .brand {
+    font-size: 2rem;
+  }
+
+  .header-icon {
+    display: none;
+  }
+
+  .mobile-nav-list {
+    display: none;
+  }
+
+  .desktop-nav-list {
+    display: flex;
+  }
+
   .home {
     background-size: auto;
   }

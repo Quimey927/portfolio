@@ -1,6 +1,6 @@
 // Nav-links active logic
 
-const navLinks = document.querySelectorAll('.nav-list a');
+const navLinks = document.querySelectorAll('.desktop-nav-list a');
 
 const sections = document.querySelectorAll('section');
 
