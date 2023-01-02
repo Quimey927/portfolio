@@ -15,7 +15,7 @@
   </head>
   <body>
     <header class="header">
-      <a class="brand">Quimey</a>
+      <span class="brand">Quimey</span>
       <ul class="nav-list">
         <li><a href="#home" class="active">Inicio</a></li>
         <li><a href="#about-me">Sobre mí</a></li>
@@ -28,6 +28,8 @@
         <div class="home__slogan">
           <h1>Hola, soy <span>Quimey</span></h1>
           <p>Desarrollador Frontend</p>
+        </div>
+        <div class="home__icons">
           <div class="home__icon">
             <a href="https://github.com/Quimey927" target="_blank">
               <img
@@ -41,7 +43,7 @@
             <a href="https://www.linkedin.com/in/quimey-mata/" target="_blank">
               <img
                 class="icon"
-                src="./assets/icons/linkedin-icon.png"
+                src="./assets/icons/linkedin-icon3.png"
                 alt="Linkedin Icon"
               />
             </a>
@@ -79,43 +81,27 @@
               href="./assets/Currículum.pdf"
               target="_blank"
             >
-              Descargar Currículum
+              <span>Descargar Currículum</span>
+              <img
+                class="download-icon"
+                src="./assets/icons/download-icon.png"
+                alt="Download img"
+              />
             </a>
           </div>
 
-          <div>
+          <div class="tabs">
             <div class="tab-titles">
               <ul>
-                <li class="tab-link active-link">Formación</li>
-                <li class="tab-link not-active-link">Habilidades</li>
+                <li class="tab-link active-link">Habilidades</li>
+                <li class="tab-link not-active-link">Formación</li>
                 <li class="tab-link not-active-link">Experiencia Laboral</li>
               </ul>
             </div>
 
-            <div class="tab-content active-tab" id="Formación">
-              <ul class="education">
-                <li class="tab-item">
-                  <span>The Web Development Bootcamp 2022</span><br />Colt
-                  Steele
-                </li>
-                <li class="tab-item">
-                  <span>React - The Complete Guide</span><br />Maximilian
-                  Schwartzmüller
-                </li>
-                <li class="tab-item">
-                  <span>Code w/ Node 2021</span><br />Ian Schoonover
-                </li>
-                <li class="tab-item">
-                  <span>Javascript30, What The Flexbox!?, CSS Grid</span
-                  ><br />Wes Bos
-                </li>
-                <li class="tab-item">
-                  <span>Conquering Responsive Layouts</span><br />Kevin Powell
-                </li>
-              </ul>
-            </div>
+            <div class="underline"></div>
 
-            <div class="tab-content skills" id="Habilidades">
+            <div class="tab-content active-tab skills" id="Habilidades">
               <div class="technologies">
                 <div class="col">
                   <div class="technology">
@@ -214,8 +200,37 @@
               <h3>Idiomas</h3>
               <p>
                 Español (nativo) <span class="circle">&#8226;</span> Inglés
-                (intermedio)
+                (intermedio avanzado)
               </p>
+            </div>
+
+            <div class="tab-content" id="Formación">
+              <ul class="education">
+                <li class="tab-item">
+                  <span>The Web Development Bootcamp 2022</span><br />Colt
+                  Steele
+                </li>
+                <li class="tab-item">
+                  <span>React - The Complete Guide</span><br />Maximilian
+                  Schwartzmüller
+                </li>
+                <li class="tab-item">
+                  <span>Code w/ Node 2021</span><br />Ian Schoonover
+                </li>
+                <li class="tab-item">
+                  <span>Javascript30, What The Flexbox!?, CSS Grid</span
+                  ><br />Wes Bos
+                </li>
+                <li class="tab-item">
+                  <span>Conquering Responsive Layouts</span><br />Kevin Powell
+                </li>
+                <li class="tab-item">
+                  <span
+                    >Responsive Web Design Certification, JavaScript Algorithms
+                    and Data Structures Certification</span
+                  ><br />freeCodeCamp
+                </li>
+              </ul>
             </div>
 
             <div class="tab-content experience" id="Experiencia Laboral">

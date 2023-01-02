@@ -1,11 +1,7 @@
 :root {
   --ff-primary: 'Poppins', sans-serif;
-  /* --ff-secondary: 'Raleway', sans-serif;
-  --ff-tertiary: 'Nunito', sans-serif; */
-
   --color-primary: hsl(0, 56%, 52%);
   --color-secondary: rgb(5, 5, 5);
-
   --header-height: 68px;
 }
 
@@ -46,7 +42,7 @@ ul {
 }
 
 section {
-  padding: 5rem;
+  padding: 3rem;
 }
 
 .section__title {
@@ -84,7 +80,7 @@ section {
 
 .brand {
   font-size: 2rem;
-  cursor: pointer;
+  cursor: default;
   color: var(--color-primary);
   font-weight: 200;
 }
@@ -117,24 +113,23 @@ section {
 /* HOME */
 
 .home {
-  height: calc(100vh - var(--header-height));
-  background-image: url('./assets/final-profile-image.png');
-  background-size: cover;
-  background-position: right top;
+  min-height: calc(100vh - var(--header-height));
+  background-image: url('./assets/profile-image.png');
+  background-position: right bottom;
   background-attachment: fixed;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  place-items: center;
+  background-repeat: no-repeat;
+  background-size: 650px;
 }
 
 .home__slogan {
+  text-align: center;
   font-size: 1.5rem;
 }
 
 .home__slogan h1 {
+  font-size: clamp(1rem, 7vw, 2.5rem);
   margin-top: 0;
   margin-bottom: 0.5em;
-  font-weight: 400;
 }
 
 .home__slogan span {
@@ -143,25 +138,25 @@ section {
 }
 
 .home__slogan p {
+  font-size: clamp(0.7rem, 5.5vw, 1.5rem);
   font-weight: 300;
+  margin: 0;
 }
 
-.home__icon {
-  display: inline;
-}
-
-.home__icon + .home__icon {
-  margin-left: 1rem;
-}
-
-.home__icon a {
-  text-decoration: none;
+.home__icons {
+  display: flex;
+  gap: 1.5rem;
+  padding: 2rem;
+  justify-content: center;
 }
 
 .home__icon .icon {
   width: 30px;
   height: 30px;
   transition: scale 300ms ease;
+  padding: 0.25em;
+  border: 1px solid white;
+  border-radius: 4px;
 }
 
 .home__icon .icon:is(:hover, :focus) {
@@ -172,30 +167,24 @@ section {
 
 .about-me {
   background-color: var(--color-secondary);
+  padding-inline: 1rem;
 }
 
 .about-me__title {
   text-align: center;
   font-size: 1.7rem;
+  margin-bottom: 0;
 }
 
 .about-me__container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   gap: 5rem;
-  align-items: baseline;
 }
 
 .info {
-  text-align: end;
-  max-width: 450px;
-  justify-self: end;
-}
-
-.info h2 {
-  margin-top: 0;
-  margin-bottom: 1rem;
-  font-size: 2rem;
+  text-align: center;
+  max-width: 550px;
+  margin-inline: auto;
 }
 
 .info p {
@@ -221,14 +210,31 @@ section {
   scale: 1.1;
 }
 
+.info img {
+  width: 1.2rem;
+  vertical-align: middle;
+  margin-left: 0.3rem;
+}
+
+.tabs {
+  max-width: 500px;
+  margin-inline: auto;
+  text-align: center;
+}
+
 .tab-titles {
-  margin-top: 0;
-  margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
 }
 
 .tab-titles ul {
   display: flex;
-  gap: 2rem;
+  font-size: 0.9rem;
+  justify-content: space-between;
+}
+
+.active-link {
+  color: var(--color-primary);
+  cursor: default;
 }
 
 .not-active-link {
@@ -238,27 +244,28 @@ section {
   color: white;
 }
 
-.not-active-link::after {
+.not-active-link::before {
   content: '';
-  background-color: white;
+  background-color: var(--color-primary);
   display: block;
   width: 30px;
   position: absolute;
-  bottom: 0;
+  top: -3px;
   left: 0;
-  height: 2px;
+  height: 1px;
   transform: scale(0);
   transition: transform 0.5s ease;
   transform-origin: left;
 }
 
-.not-active-link:hover::after {
+.not-active-link:hover::before {
   transform: scale(1);
 }
 
-.active-link {
-  color: var(--color-primary);
-  cursor: default;
+.underline {
+  height: 1px;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(0.25turn, var(--color-primary), transparent);
 }
 
 .tab-content {
@@ -290,15 +297,15 @@ section {
 
 .technologies {
   display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 3rem;
-  justify-items: start;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  max-width: 350px;
+  margin-inline: auto;
 }
 
 .technology {
   display: grid;
   grid-template-columns: 50px 1fr;
-  gap: 1rem;
   place-items: center;
 }
 
@@ -341,6 +348,7 @@ section {
 .projects {
   background-color: black;
   text-align: center;
+  padding-inline: 1.5rem;
 }
 
 .projects__title {
@@ -349,16 +357,15 @@ section {
 
 .projects__container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
   justify-items: center;
-  gap: 0.3rem;
+  gap: 1rem;
 }
 
 .project {
   position: relative;
-  max-width: 500px;
   transition: scale 350ms ease;
   border: 1px solid var(--color-primary);
+  justify-items: center;
 }
 
 .projects__container:has(.project:hover) .project:not(:hover) {
@@ -369,23 +376,13 @@ section {
   scale: 1.1;
 }
 
-.project__title {
-  background-color: var(--color-primary);
-}
-
-.project__title h4 {
-  margin: 0;
-  padding: 1rem;
-  user-select: none;
-}
-
 .project img {
   vertical-align: bottom;
 }
 
 .project__description {
-  font-size: 0.6rem;
-  font-weight: 800;
+  font-size: clamp(0.44rem, 2.2vw, 0.6rem);
+  font-weight: 400;
   display: block;
   position: absolute;
   padding-inline: 1rem;
@@ -437,7 +434,7 @@ section {
   height: 2px;
   background-color: white;
   padding: 0;
-  margin-block: 1rem;
+  margin-block: 0.5rem;
 }
 
 .hidden {
@@ -542,8 +539,101 @@ section {
   }
 }
 
-@media (max-width: 1050px) {
-  .tab-link {
-    font-size: 0.9rem;
+@media (min-width: 465px) {
+  .about-me {
+    padding: 3rem;
+  }
+
+  .tab-titles ul {
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .projects__container {
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  }
+
+  .project {
+    max-width: 400px;
+  }
+
+  .project__description {
+    font-size: 0.6rem;
+    font-weight: 800;
+  }
+
+  .white-line {
+    margin-block: 1rem;
+  }
+}
+
+@media (min-width: 666px) {
+  section {
+    padding: 5rem;
+  }
+
+  .home {
+    background-size: 800px;
+  }
+
+  .home__slogan {
+    text-align: left;
+    padding: 2rem;
+  }
+
+  .home__icons {
+    justify-content: start;
+  }
+}
+
+@media (min-width: 850px) {
+  .home {
+    background-size: auto;
+  }
+
+  .home__slogan {
+    padding: 4rem;
+  }
+
+  .home__icons {
+    padding: 4rem;
+  }
+}
+
+@media (min-width: 960px) {
+  .about-me__container {
+    grid-template-columns: 1fr 1fr;
+    align-items: baseline;
+  }
+
+  .about-me__title {
+    margin-bottom: 1rem;
+  }
+
+  .info {
+    text-align: end;
+  }
+
+  .tabs {
+    text-align: left;
+  }
+
+  .tab-titles ul {
+    justify-content: start;
+  }
+
+  .technologies {
+    grid-template-columns: auto 1fr;
+    gap: 3rem;
+    justify-items: start;
+    margin-left: 0;
+  }
+
+  .technology {
+    gap: 1rem;
+  }
+
+  .technology span {
+    justify-self: start;
   }
 }
